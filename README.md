@@ -1,13 +1,33 @@
-# mcp-pexels
+# @pipeworx/pexels
 
-Pexels MCP.
+[Pexels](https://www.pexels.com/api/documentation/) MCP — photo + video search. Free key 200/hr, 20k/mo.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
-## Tools
+## Auth
 
-| Tool | Description |
-|------|-------------|
+- Platform: `PLATFORM_PEXELS_KEY`. BYO: `?_apiKey=…`.
+
+## Tools (photos)
+
+- `photo_search(query, orientation?, size?, color?, locale?, page?, per_page?)`
+- `photo_curated(page?, per_page?)`
+- `photo(id)`
+
+## Tools (videos)
+
+- `video_search(query, orientation?, size?, locale?, page?, per_page?)`
+- `video_popular(min_width?, min_height?, min_duration?, max_duration?, page?, per_page?)`
+- `video(id)`
+
+## Tools (collections)
+
+- `featured_collections(page?, per_page?)`
+- `collection_media(id, type?, sort?, page?, per_page?)`
+
+## Data source
+
+`https://api.pexels.com`
 
 ## Quick Start
 
@@ -23,7 +43,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +67,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
