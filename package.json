@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-pexels",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pexels MCP.",
   "type": "module",
   "main": "src/index.ts",
@@ -24,5 +24,9 @@
   "devDependencies": {
     "typescript": "^5.9.3",
     "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-9780ff51a5e6b60a7dc6ebe4319ae6a901c6a6ab4dcc2399faf758c6edc6dd80",
+    "sourceCommit": "00c836ddeaecbdd581dcfb0fb1842efea104006e"
   }
 }
