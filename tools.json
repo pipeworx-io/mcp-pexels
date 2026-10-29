@@ -1,0 +1,101 @@
+[
+  {
+    "name": "photo_search",
+    "description": "Search Pexels photos by keyword (required); returns paginated results with image URLs in multiple sizes, photographer name, and attribution link.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "photo_curated",
+    "description": "Fetch Pexels' curated editorial photo feed; returns paginated photo objects with image URLs in multiple sizes (original, large, medium, small, tiny) and photographer info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "photo",
+    "description": "Fetch full metadata for a single Pexels photo by numeric id, including all sized image URLs, photographer name/URL, dimensions, and alt text.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "video_search",
+    "description": "Search Pexels videos by keyword (required); returns paginated results with video file URLs at multiple resolutions, duration, and videographer info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "video_popular",
+    "description": "Fetch Pexels' popular video feed; returns paginated video objects with file URLs at multiple resolutions, duration, and videographer info.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "video",
+    "description": "Fetch full metadata for a single Pexels video by numeric id, including file URLs at all available resolutions, duration, width, height, and videographer attribution.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "featured_collections",
+    "description": "List Pexels' featured curated collections; returns collection id, title, description, and media counts for photos and videos.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "collection_media",
+    "description": "Fetch all photos and videos inside a specific Pexels collection by string id; returns paginated mixed media objects with URLs and metadata.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
